@@ -1,0 +1,283 @@
+#menuToggle {
+  display: block;
+  position: fixed;
+  top: 10px;
+  padding-left: 10px;
+  z-index: 40;
+}
+
+#menuToggle a {
+  color: #232323;
+  text-decoration: none;
+}
+
+#menuToggle a:hover {
+  color: rgb(99, 69, 155);
+}
+
+#menuToggle input {
+  display: block;
+  width: 55px;
+  height: 35px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 60;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 3px;
+  z-index: 50;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg);
+}
+
+/*
+ * The last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0px, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  position: absolute;
+  width: 100px;
+  margin: -100px 0 0 -50px;
+  padding: 110px 0px 25px 50px;
+  background: #ffffff;
+  list-style-type: none;
+
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 26px;
+  font-family: "PT Sans", sans-serif;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+#hero {
+  height: 100vh;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#hero video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  object-fit: cover;
+  font-family: "object-fit: cover";
+}
+
+#hero .texture {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  background: url("../images/texture.png");
+}
+
+#hero .caption {
+  position: relative;
+  z-index: 20;
+  text-align: center;
+  color: #ffffff;
+}
+
+#hero .caption h1 {
+  text-transform: uppercase;
+  font-size: 2em;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+#hero .caption h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  #hero .caption h1 {
+    font-size: 2.5rem;
+  }
+
+  #hero .caption h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #hero .caption h1 {
+    font-size: 3rem;
+  }
+
+  #hero .caption h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #hero .caption h1 {
+    font-size: 4rem;
+  }
+
+  #hero .caption h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.body-section {
+  background-color: #0f0f0f;
+  padding: 2% 10% 2% 10%;
+  text-align: justify;
+}
+
+h3 {
+  font-size: 50px;
+  font-family: "Oswald", sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+p {
+  font-size: 40px;
+  font-family: "PT Sans", sans-serif;
+  color: #f5f3f3;
+}
+
+a:link {
+  color: #f5df4d;
+}
+/* visited link */
+a:visited {
+  color: #9369a8;
+}
+
+/* mouse over link */
+a:hover {
+  color: #9fdbad;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  color: #f5f3f3;
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
+}
+
+.box-label {
+  width: 30%;
+  text-align: right;
+  padding: 0px 10px 10px 0px;
+}
+
+.box {
+  width: 70%;
+  text-align: left;
+  padding: 0px 0px 10px 10px;
+}
+
+input[type="text"] {
+  border-radius: 7px;
+  width: 65%;
+}
+
+textarea[id="message"] {
+  height: 200px;
+  border-radius: 7px;
+  width: 65%;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  background-color: #f5df4d;
+  width: 45%;
+  border-radius: 7px;
+}
+
+input[type="submit"]:hover {
+  background-color: #9fdbad;
+}
+
+footer {
+  font-size: 20px;
+  font-family: "PT Sans", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  background-color: #0f0f0f;
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
