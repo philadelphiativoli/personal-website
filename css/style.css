@@ -1,3 +1,31 @@
+a:link {
+  color: #f5df4d;
+}
+/* visited link */
+a:visited {
+  color: #9369a8;
+}
+
+/* mouse over link */
+a:hover {
+  color: #9fdbad;
+}
+
+h3 {
+  font-size: 50px;
+  font-family: "Oswald", sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+p {
+  font-size: 40px;
+  font-family: "PT Sans", sans-serif;
+  color: #f5f3f3;
+}
+
+
+
 #menuToggle {
   display: block;
   position: fixed;
@@ -170,7 +198,7 @@
 
 #hero .caption h2:hover {
   filter: blur(4px);
-  transition:0.5s all;
+  transition:0.9s all;
 }
 
 @media screen and (min-width: 768px) {
@@ -207,32 +235,6 @@
   background-color: #0f0f0f;
   padding: 2% 10% 2% 10%;
   text-align: justify;
-}
-
-h3 {
-  font-size: 50px;
-  font-family: "Oswald", sans-serif;
-  color: #ffffff;
-  text-align: center;
-}
-
-p {
-  font-size: 40px;
-  font-family: "PT Sans", sans-serif;
-  color: #f5f3f3;
-}
-
-a:link {
-  color: #f5df4d;
-}
-/* visited link */
-a:visited {
-  color: #9369a8;
-}
-
-/* mouse over link */
-a:hover {
-  color: #9fdbad;
 }
 
 .container {
