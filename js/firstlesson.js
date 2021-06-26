@@ -1,10 +1,29 @@
-const sayHello = "Hello there!"
-console.log(sayHello)
+// Array
+[]
+// a list of objects
 
-2 variables
+// const myArray = [12, "string"]
 
-const sayWelcome ="Welcome to "
-console.log(sayWelcome)
-const sayTlesson ="Today's Lesson"
-console.log(sayTlesson)
-sayWelcome + sayTlesson
+// examples - shopping cart DataTransferItemList, facebook friends list etc
+
+// i++ === i + 1 increment
+// i-- === i - 1 decrement
+
+// const myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// for(let i = 0; i < 10; i++) {
+// console.log(i)
+// } 
+// it will count to 10.
+
+const shoppingCart = [10, 12, 43, 14, 15]
+let total = 0
+for(let i = 0; i < 4; i++) {
+    if(shoppingCart[1])
+    total = shoppingCart[i] + total 
+} else {
+    console.log("No more items")
+}
+total
+
+
+code academy on variables and operators
