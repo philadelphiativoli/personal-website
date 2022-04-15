@@ -1,27 +1,21 @@
 h3 {
   font-size: 50px;
   font-family: "Oswald", sans-serif;
-  color: #ffffff;
+  color: #0f0f0f;
   text-align: center;
 }
 
-p {
-  font-size: 40px;
-  font-family: "PT Sans", sans-serif;
-  color: #f5f3f3;
-}
-
 a:link {
-  color: #f5df4d;
+  color: #2b4c8d;
 }
 /* visited link */
 a:visited {
-  color: #9369a8;
+  color: #5f2e75;
 }
 
 /* mouse over link */
 a:hover {
-  color: #9fdbad;
+  color: #339c8b;
 }
 
 input[type="text"] {
@@ -91,7 +85,7 @@ footer {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #ffffff;
+  background: #000000;
   border-radius: 3px;
   z-index: 50;
   transform-origin: 4px 0px;
@@ -221,14 +215,9 @@ footer {
 
 #hero .caption h2 {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin: 0;
   font-family: "PT Sans", sans-serif;
-}
-
-#hero .caption h2:hover {
-  filter: blur(4px);
-  transition:0.9s all;
 }
 
 @media screen and (min-width: 768px) {
@@ -247,7 +236,7 @@ footer {
   }
 
   #hero .caption h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -257,20 +246,23 @@ footer {
   }
 
   #hero .caption h2 {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
   }
 }
 
 .body-section {
-  background-color: #0f0f0f;
+  background-color: #ffffff;
   padding: 2% 10% 2% 10%;
-  text-align: justify;
+  text-align: left;
+  color: #1d1a1a;
+  font-family: "PT Sans", sans-serif;
+  font-size: 35px;
 }
 
 .container {
   display: flex;
   justify-content: center;
-  color: #f5f3f3;
+  color: #0f0f0f;
   font-family: "PT Sans", sans-serif;
   font-size: 30px;
 }
@@ -286,4 +278,54 @@ footer {
   text-align: left;
   padding: 0px 0px 10px 10px;
 }
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+ul.columns {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
 
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+#container {
+	text-align: center;
+}
+
+#text {
+	display: inline-block;
+ /*color: rgb(255, 255, 255);
+ /* font-size: 2.5rem;
+  margin: 0;
+  font-family: "PT Sans", sans-serif;*/
+}
+
+#cursor {
+	display: inline-block;
+	vertical-align: middle;
+	width: 2.5px;
+	height: 2.5rem;
+	background-color: white;
+	animation: blink .75s step-end infinite;
+}
+
+@keyframes blink {
+	from, to { 
+		background-color: transparent 
+	}
+	50% { 
+		background-color: rgb(255, 255, 255); 
+	}
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
